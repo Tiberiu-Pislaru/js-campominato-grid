@@ -101,3 +101,4 @@ level3.addEventListener('click', function(){
         maxDimension(lenghtLevel3);
     }
 });
+
