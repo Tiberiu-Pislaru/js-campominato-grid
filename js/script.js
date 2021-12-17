@@ -43,12 +43,10 @@ function createBox(container, index) {
     const square = document.createElement('div');
     square.className = 'box';
     console.log(square);
-
-    
     square.innerHTML = index;
     container.append(square);
     square.addEventListener('click', function () {
-        this.classList.toggle('green');
+        this.classList.add('lightBlue');
     })
 }
 
@@ -71,6 +69,7 @@ function maxDimension(maxNumber){
 // a meno che l'utente non abbia cliccato un altro bottone prima  
 level1.addEventListener('click', function(){
     if(!checkLevel1){
+        containerBig.innerHTML='';
         checkLevel1= true;
         checkLevel2=false;
         checkLevel3=false;
@@ -82,6 +81,7 @@ level1.addEventListener('click', function(){
 
 level2.addEventListener('click', function(){
     if (!checkLevel2) {
+        containerBig.innerHTML = '';
         checkLevel2 = true;
         checkLevel1 = false;
         checkLevel3 = false;
@@ -92,6 +92,7 @@ level2.addEventListener('click', function(){
 
 level3.addEventListener('click', function(){
     if(!checkLevel3){
+        containerBig.innerHTML = '';
         checkLevel3 = true;
         checkLevel2 = false;
         checkLevel1 = false;
